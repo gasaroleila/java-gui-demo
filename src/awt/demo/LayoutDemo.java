@@ -60,6 +60,7 @@ public class LayoutDemo extends Frame {
     public Label newLabel(String text) {
         Label label = new Label(text);
         label.setVisible(true);
+        label.setAlignment(Label.CENTER);
         return label;
     }
 
@@ -75,7 +76,7 @@ public class LayoutDemo extends Frame {
 //      form.setLayout(new GridLayout(2,2));
       Label fname = newLabel("Firstname");
       TextField fInput = newInput();
-      Button send = new Button("send");
+      Button send = new Button("send"); //source object
       send.setActionCommand("SEND");
 
       Button clear = new Button("Clear");
@@ -94,6 +95,7 @@ public class LayoutDemo extends Frame {
     }
 
 
+    //Listener object
     public class ButtonClickHandler implements ActionListener {
         TextField fieldToSubmit;
         public ButtonClickHandler(TextField field) {

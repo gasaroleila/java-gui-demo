@@ -26,8 +26,16 @@ public class MenuDemo extends JFrame {
         submenu.add(subitem1);
         submenu.add(subitem2);
         m1.add(submenu);
-        m1.add(subitem1);
-        m1.add(subitem2);
+//        m1.add(subitem1);
+//        m1.add(subitem2);
+
+        m2.addActionListener(e -> {
+            JFrame F2 = new JFrame();
+            F2.setVisible(true);
+            F2.setLayout(new FlowLayout(10));
+            F2.setBounds(100, 100,120,100);
+            this.add(F2);
+        });
 
         mb.add(m1);
         mb.add(m2);
@@ -37,16 +45,7 @@ public class MenuDemo extends JFrame {
         this.setBounds(100, 100,120,100);
 
 
-        m2.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JFrame F2 = new JFrame();
-                F2.setVisible(true);
-                F2.setVisible(true);
-                F2.setLayout(new FlowLayout());
-                F2.setBounds(100, 100,120,100);
-            }
-        });
+
     }
 
     public static void main(String args[]) throws IOException {
